@@ -8,12 +8,12 @@ import argparse
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Create a secure password')
 parser.add_argument('--dict', dest='dictionaryFile', type=str, 
-				   default='/usr/share/dict/words' if os.path.isfile('/usr/share/dict/words') else '/usr/dict/words',
-                   help='What dictionary to use')
+					default='/usr/share/dict/words' if os.path.isfile('/usr/share/dict/words') else '/usr/dict/words',
+					help='What dictionary to use')
 parser.add_argument('--words', dest='words', type=int, default=4,
-                   help='How many words the password should be made up of')
+					help='How many words the password should be made up of')
 parser.add_argument('--wordSize', dest='wordSize', type=int, default=-1,
-                   help='How big each word needs to be')
+					help='How big each word needs to be')
 args = parser.parse_args()
 
 # Store parsed arguments
